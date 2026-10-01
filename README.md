@@ -9,7 +9,7 @@ The plugin provides a web-based experience for accessing Sakinah's Islamic conte
 This plugin is part of the **Sakinah ecosystem**.
 
 📱 **Main Sakinah App:**
-[Sakinah App Repository](https://github.com/oussamatght/Sakinah-App?utm_source=chatgpt.com)
+[Sakinah App Repository](https://github.com/oussamatght/Sakinah-App)
 
 🌐 **This Repository:**
 [Sakinah Web Plugin](https://github.com/oussamatght/sakinah-plugin-website?utm_source=chatgpt.com)
