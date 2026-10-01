@@ -1,60 +1,145 @@
-# Sakinah
+# 🕌 Sakinah Web Plugin
 
-Sakinah is an Arabic-language Islamic companion website. It brings Quran
-reading, prayer times, a digital tasbih, hadith, daily adhkar, an Islamic
-library, and a Qibla compass together in one place.
+**Sakinah Web Plugin** is the web companion/plugin for **Sakinah**, an Arabic Islamic companion application that brings essential Islamic tools together in one place.
 
-## Requirements
+The plugin provides a web-based experience for accessing Sakinah's Islamic content and services.
 
-- Node.js 22 or later
-- npm
+## 🔗 Sakinah App
 
-## Getting started
+This plugin is part of the **Sakinah ecosystem**.
 
-```sh
+📱 **Main Sakinah App:**
+[Sakinah App Repository](https://github.com/oussamatght/Sakinah-App?utm_source=chatgpt.com)
+
+🌐 **This Repository:**
+[Sakinah Web Plugin](https://github.com/oussamatght/sakinah-plugin-website?utm_source=chatgpt.com)
+
+---
+
+## ✨ Features
+
+* 📖 Quran
+* 🕋 Prayer Times
+* 📿 Digital Tasbih
+* 📚 Hadith
+* 🤲 Daily Adhkar
+* 📚 Islamic Library
+* 🧭 Qibla
+* 🌙 Arabic-first Islamic experience
+* 📱 Responsive web interface
+* ↔️ RTL support
+
+---
+
+## 🛠️ Tech Stack
+
+* **React**
+* **TypeScript**
+* **TanStack Start**
+* **TanStack Router**
+* **Vite**
+* **Nitro**
+* **Vercel**
+
+---
+
+## 📋 Requirements
+
+* Node.js **22+**
+* npm
+
+---
+
+## 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/oussamatght/sakinah-plugin-website.git
+cd sakinah-plugin-website
+```
+
+Install dependencies:
+
+```bash
 npm install
 ```
 
-Start the local development server:
+Start the development server:
 
-```sh
+```bash
 npm run dev
 ```
 
-Vite prints the local URL when the server starts.
+Vite will display the local development URL in the terminal.
 
-## Scripts
+---
+
+## 📜 Scripts
 
 | Command             | Description                  |
 | ------------------- | ---------------------------- |
-| `npm run dev`       | Start the development server |
-| `npm run build`     | Build the production app     |
-| `npm run build:dev` | Build using development mode |
-| `npm run preview`   | Preview the production build |
+| `npm run dev`       | Start development server     |
+| `npm run build`     | Build production application |
+| `npm run build:dev` | Build in development mode    |
+| `npm run preview`   | Preview production build     |
 | `npm run lint`      | Run ESLint                   |
 
-## Deploy
+---
 
-### Vercel
+## ☁️ Deployment
 
-This is a TanStack Start application. Deploy it with Vercel's **TanStack Start**
-framework preset and the Nitro Vite plugin. The repository's `vercel.json`
-selects that framework preset. Use `npm run build` as the Build Command. Leave
-the Output Directory override empty: Nitro creates `.vercel/output`, including
-the server function and static assets, for Vercel to deploy.
+Sakinah Web Plugin uses **TanStack Start + Nitro** and is configured for Vercel.
 
-```sh
+Build the application with:
+
+```bash
 npm run build
 ```
 
-Do not set the Output Directory to `dist` or add a static-site rewrite; the app
-uses server-rendered TanStack Start routes.
+### Vercel
 
-### Other platforms
+Use the **TanStack Start** framework preset.
 
-Build the app with `npm run build`, then deploy the generated output using a
-platform that supports TanStack Start and Nitro.
+**Build Command:**
 
-## Repository
+```text
+npm run build
+```
 
-[oussamatght/sakinah-plugin-website](https://github.com/oussamatght/sakinah-plugin-website)
+**Output Directory:**
+
+Leave empty.
+
+Do **not** use `dist` as the output directory. Nitro generates the required `.vercel/output` deployment structure.
+
+---
+
+## 🔗 Sakinah Ecosystem
+
+| Project               | Repository                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------ |
+| 📱 Sakinah App        | [Sakinah-App](https://github.com/oussamatght/Sakinah-App?utm_source=chatgpt.com)                       |
+| 🌐 Sakinah Web Plugin | [sakinah-plugin-website](https://sakinah-plugin-website-4ui1.vercel.app/) |
+
+---
+
+## 🕌 About Sakinah
+
+**Sakinah — سكينة** is an Arabic Islamic companion project focused on bringing Quran, prayer, Hadith, Adhkar, Tasbih, Islamic books, and Qibla tools together in one experience.
+
+The Web Plugin extends the Sakinah ecosystem to the web.
+
+> **Sakinah — Your Islamic Companion.**
+
+---
+
+<div align="center">
+
+**🕌 Sakinah**
+
+Quran · Prayer · Tasbih · Hadith · Adhkar · Library · Qibla
+
+Made with ❤️ for the Muslim community.
+
+</div>
