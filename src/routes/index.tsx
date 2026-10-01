@@ -13,11 +13,12 @@ import {
 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import { FeatureFinder } from "@/components/FeatureFinder";
+import { SiteNavigation } from "@/components/SiteNavigation";
+import { APK_DOWNLOAD_URL } from "@/lib/apk-download";
 
 const TITLE = "سكينة — رفيقك اليومي للقرآن والذكر";
 const DESC =
   "سكينة تطبيق إسلامي هادئ يجمع القرآن الكريم ومواقيت الصلاة والأحاديث والأذكار والمكتبة الإسلامية والقبلة في مكان واحد.";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -74,43 +75,7 @@ function Index() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Header */}
-      <header className="absolute inset-x-0 top-0 z-20">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 text-night-foreground">
-          <span className="flex items-center gap-3 font-display text-2xl">
-            <img
-              src="/favicon.ico"
-              alt="شعار سكينة"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-xl bg-white object-contain p-1"
-            />
-            سكينة
-          </span>
-          <nav className="hidden gap-8 text-sm opacity-90 md:flex">
-            <Link to="/features" className="hover:text-gold">
-              ما يميزنا
-            </Link>
-            <a href="#features" className="hover:text-gold">
-              المزايا
-            </a>
-            <a href="#privacy" className="hover:text-gold">
-              الخصوصية
-            </a>
-            <a href="#download" className="hover:text-gold">
-              تنزيل التطبيق
-            </a>
-            <a href="#faq" className="hover:text-gold">
-              الأسئلة الشائعة
-            </a>
-          </nav>
-          <a
-            href="#download"
-            className="rounded-full border border-gold/50 px-5 py-2 text-sm hover:bg-gold hover:text-night"
-          >
-            تنزيل التطبيق
-          </a>
-        </div>
-      </header>
+      <SiteNavigation overlay />
 
       {/* Hero */}
       <section className="relative bg-night text-night-foreground">
@@ -129,7 +94,7 @@ function Index() {
               <a
                 id="start"
                 className="rounded-full bg-gold px-8 py-3.5 font-medium text-night shadow-soft transition hover:brightness-110"
-                href="https://expo.dev/accounts/tatight/projects/mobile/builds/c7774bb6-605d-4eab-93a1-9e64e8d346b7"
+                href={APK_DOWNLOAD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -167,11 +132,10 @@ function Index() {
               خذ سكينة معك أينما ذهبت
             </h2>
             <p className="mx-auto mt-5 max-w-xl leading-loose text-muted-foreground md:mx-0">
-              امسح رمز QR بكاميرا هاتفك لفتح صفحة تنزيل ملف APK، أو اضغط الزر للتنزيل مباشرةً من
-              صفحة الإصدار.
+              امسح رمز QR بكاميرا هاتفك أو اضغط الزر لتنزيل ملف APK مباشرةً من Google Drive.
             </p>
             <a
-              href="https://expo.dev/accounts/tatight/projects/mobile/builds/c7774bb6-605d-4eab-93a1-9e64e8d346b7"
+              href={APK_DOWNLOAD_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-medium text-primary-foreground shadow-soft transition hover:bg-night focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -179,7 +143,7 @@ function Index() {
               <Download className="h-5 w-5" aria-hidden="true" />
               تنزيل تطبيق APK
             </a>
-            <p className="mt-3 text-sm text-muted-foreground">رابط تنزيل آمن عبر Expo</p>
+            <p className="mt-3 text-sm text-muted-foreground">تنزيل مباشر من Google Drive</p>
           </div>
           <div className="mx-auto w-full max-w-xs rounded-3xl border bg-white p-4 text-center shadow-soft">
             <img
@@ -295,14 +259,28 @@ function Index() {
             ابدأ رحلتك داخل سكينة اليوم
           </h2>
           <p className="mx-auto mt-4 max-w-2xl leading-loose text-night-foreground/75">
-            اقرأ القرآن، وتابع أذكارك، واستكشف كل ما يميز التطبيق في صفحة المزايا.
+            اقرأ القرآن، وتابع أذكارك، واستكشف المكتبة الإسلامية، وحمّل التطبيق على هاتفك.
           </p>
-          <Link
-            to="/features"
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 font-medium text-night shadow-soft transition hover:brightness-110"
-          >
-            اطلع على ما يميزنا
-          </Link>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link
+              to="/download"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-gold px-7 py-3 font-medium text-night shadow-soft transition hover:brightness-110"
+            >
+              📱 تحميل التطبيق
+            </Link>
+            <Link
+              to="/library"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-night-foreground/30 px-7 py-3 font-medium text-night-foreground transition hover:border-gold hover:text-gold"
+            >
+              📚 اكتشف المكتبة
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-night-foreground/30 px-7 py-3 font-medium text-night-foreground transition hover:border-gold hover:text-gold"
+            >
+              ❓ الأسئلة والاستفسارات
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -320,9 +298,37 @@ function Index() {
           />
           <span className="font-display text-3xl text-gold">سكينة</span>
           <p className="opacity-70">رفيقك اليومي للقرآن والذكر</p>
+          <p className="mt-2 max-w-xl leading-loose text-night-foreground/80">
+            اللهم بارك لمن أنشأ هذا التطبيق، واجزه خير الجزاء، واجعله في ميزان حسناته.
+          </p>
           <p className="mt-4 text-xs opacity-50">
             © {new Date().getFullYear()} سكينة. جميع الحقوق محفوظة.
           </p>
+          <div className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+            <Link to="/features" className="hover:text-gold">
+              مميزات سكينة
+            </Link>
+            <Link to="/library" className="hover:text-gold">
+              المكتبة الإسلامية
+            </Link>
+            <Link to="/download" className="hover:text-gold">
+              تحميل التطبيق
+            </Link>
+            <Link to="/install" className="hover:text-gold">
+              كيفية التثبيت
+            </Link>
+            <Link to="/contact" className="hover:text-gold">
+              الأسئلة والاستفسارات
+            </Link>
+            <a
+              href="https://github.com/oussamatght"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </footer>
     </div>

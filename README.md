@@ -18,35 +18,35 @@ This plugin is part of the **Sakinah ecosystem**.
 
 ## ✨ Features
 
-* 📖 Quran
-* 🕋 Prayer Times
-* 📿 Digital Tasbih
-* 📚 Hadith
-* 🤲 Daily Adhkar
-* 📚 Islamic Library
-* 🧭 Qibla
-* 🌙 Arabic-first Islamic experience
-* 📱 Responsive web interface
-* ↔️ RTL support
+- 📖 Quran
+- 🕋 Prayer Times
+- 📿 Digital Tasbih
+- 📚 Hadith
+- 🤲 Daily Adhkar
+- 📚 Islamic Library
+- 🧭 Qibla
+- 🌙 Arabic-first Islamic experience
+- 📱 Responsive web interface
+- ↔️ RTL support
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **React**
-* **TypeScript**
-* **TanStack Start**
-* **TanStack Router**
-* **Vite**
-* **Nitro**
-* **Vercel**
+- **React**
+- **TypeScript**
+- **TanStack Start**
+- **TanStack Router**
+- **Vite**
+- **Nitro**
+- **Vercel**
 
 ---
 
 ## 📋 Requirements
 
-* Node.js **22+**
-* npm
+- Node.js **22+**
+- npm
 
 ---
 
@@ -77,13 +77,28 @@ Vite will display the local development URL in the terminal.
 
 ## 📜 Scripts
 
-| Command             | Description                  |
-| ------------------- | ---------------------------- |
-| `npm run dev`       | Start development server     |
-| `npm run build`     | Build production application |
-| `npm run build:dev` | Build in development mode    |
-| `npm run preview`   | Preview production build     |
-| `npm run lint`      | Run ESLint                   |
+| Command                   | Description                         |
+| ------------------------- | ----------------------------------- |
+| `npm run dev`             | Start development server            |
+| `npm run build`           | Build production application        |
+| `npm run build:dev`       | Build in development mode           |
+| `npm run preview`         | Preview production build            |
+| `npm run lint`            | Run ESLint                          |
+| `npm run generate:apk-qr` | Regenerate the APK download QR code |
+| `npm run verify:apk-qr`   | Decode-check the APK QR destination |
+
+## Website pages
+
+- `/` — Sakinah homepage
+- `/features` — app features and resources
+- `/library` — Islamic library overview
+- `/download` — Android APK download and QR code
+- `/install` — Android installation instructions
+- `/contact` — questions, contact links, and source repository
+
+The APK destination is maintained in `src/lib/apk-download.ts`. Regenerate the
+QR image with `npm run generate:apk-qr` and verify its encoded destination with
+`npm run verify:apk-qr`.
 
 ---
 
@@ -117,10 +132,10 @@ Do **not** use `dist` as the output directory. Nitro generates the required `.ve
 
 ## 🔗 Sakinah Ecosystem
 
-| Project               | Repository                                                                                             |
-| --------------------- | ------------------------------------------------------------------------------------------------------ |
-| 📱 Sakinah App        | [Sakinah-App](https://github.com/oussamatght/Sakinah-App?utm_source=chatgpt.com)                       |
-| 🌐 Sakinah Web Plugin | [sakinah-plugin-website](https://sakinah-plugin-website-4ui1.vercel.app/) |
+| Project               | Repository                                                                       |
+| --------------------- | -------------------------------------------------------------------------------- |
+| 📱 Sakinah App        | [Sakinah-App](https://github.com/oussamatght/Sakinah-App?utm_source=chatgpt.com) |
+| 🌐 Sakinah Web Plugin | [sakinah-plugin-website](https://sakinah-plugin-website-4ui1.vercel.app/)        |
 
 ---
 
