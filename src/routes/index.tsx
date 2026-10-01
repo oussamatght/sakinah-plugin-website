@@ -9,6 +9,7 @@ import {
   WifiOff,
   ShieldCheck,
   Heart,
+  Download,
 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import { FeatureFinder } from "@/components/FeatureFinder";
@@ -95,16 +96,19 @@ function Index() {
             <a href="#privacy" className="hover:text-gold">
               الخصوصية
             </a>
+            <a href="#download" className="hover:text-gold">
+              تنزيل التطبيق
+            </a>
             <a href="#faq" className="hover:text-gold">
               الأسئلة الشائعة
             </a>
           </nav>
-          <Link
-            to="/features"
+          <a
+            href="#download"
             className="rounded-full border border-gold/50 px-5 py-2 text-sm hover:bg-gold hover:text-night"
           >
-            ابدأ الآن
-          </Link>
+            تنزيل التطبيق
+          </a>
         </div>
       </header>
 
@@ -122,18 +126,21 @@ function Index() {
               قرآنك وصلاتك وأذكارك في تطبيق واحد هادئ، صُمّم ليرافقك في يومك دون تشتيت.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                id="start"
-                to="/features"
-                className="rounded-full bg-gold px-8 py-3.5 font-medium text-night shadow-soft transition hover:brightness-110"
-              >
-                ابدأ الآن
-              </Link>
               <a
-                href="#features"
+                id="start"
+                className="rounded-full bg-gold px-8 py-3.5 font-medium text-night shadow-soft transition hover:brightness-110"
+                href="https://expo.dev/accounts/tatight/projects/mobile/builds/c7774bb6-605d-4eab-93a1-9e64e8d346b7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="me-2 inline h-5 w-5" aria-hidden="true" />
+                نزّل تطبيق سكينة
+              </a>
+              <a
+                href="#download"
                 className="rounded-full border border-night-foreground/25 px-8 py-3.5 transition hover:border-gold hover:text-gold"
               >
-                استكشف التطبيق
+                امسح رمز QR للتنزيل
               </a>
             </div>
           </div>
@@ -146,6 +153,44 @@ function Index() {
               height={1280}
               className="arch aspect-[4/5] w-full object-cover shadow-2xl"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* App download */}
+      <section id="download" className="relative overflow-hidden bg-parchment py-20">
+        <div className="absolute inset-0 bg-pattern opacity-35" />
+        <div className="relative mx-auto grid max-w-5xl items-center gap-10 px-6 md:grid-cols-[1fr_auto]">
+          <div className="text-center md:text-start">
+            <p className="text-sm tracking-widest text-gold">✦ تطبيق سكينة على أندرويد ✦</p>
+            <h2 className="mt-3 font-display text-4xl text-primary md:text-5xl">
+              خذ سكينة معك أينما ذهبت
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl leading-loose text-muted-foreground md:mx-0">
+              امسح رمز QR بكاميرا هاتفك لفتح صفحة تنزيل ملف APK، أو اضغط الزر للتنزيل مباشرةً من
+              صفحة الإصدار.
+            </p>
+            <a
+              href="https://expo.dev/accounts/tatight/projects/mobile/builds/c7774bb6-605d-4eab-93a1-9e64e8d346b7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-medium text-primary-foreground shadow-soft transition hover:bg-night focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              <Download className="h-5 w-5" aria-hidden="true" />
+              تنزيل تطبيق APK
+            </a>
+            <p className="mt-3 text-sm text-muted-foreground">رابط تنزيل آمن عبر Expo</p>
+          </div>
+          <div className="mx-auto w-full max-w-xs rounded-3xl border bg-white p-4 text-center shadow-soft">
+            <img
+              src="/app-download-qr.png"
+              alt="رمز QR لتنزيل تطبيق سكينة على أندرويد"
+              width={435}
+              height={433}
+              loading="lazy"
+              className="mx-auto aspect-square w-full rounded-2xl object-contain"
+            />
+            <p className="mt-3 font-medium text-primary">امسح الرمز لتنزيل التطبيق</p>
           </div>
         </div>
       </section>
@@ -239,6 +284,25 @@ function Index() {
               </details>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="bg-night py-16 text-night-foreground">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <p className="text-sm tracking-widest text-gold">✦ اكتشف أكثر ✦</p>
+          <h2 className="mt-4 font-display text-4xl text-primary-foreground md:text-5xl">
+            ابدأ رحلتك داخل سكينة اليوم
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl leading-loose text-night-foreground/75">
+            اقرأ القرآن، وتابع أذكارك، واستكشف كل ما يميز التطبيق في صفحة المزايا.
+          </p>
+          <Link
+            to="/features"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 font-medium text-night shadow-soft transition hover:brightness-110"
+          >
+            اطلع على ما يميزنا
+          </Link>
         </div>
       </section>
 
