@@ -80,7 +80,7 @@ function Index() {
       {/* Hero */}
       <section className="relative bg-night text-night-foreground">
         <div className="absolute inset-0 bg-pattern opacity-40" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-24 pt-32 md:grid-cols-2 md:pt-40">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-24 pt-56 md:grid-cols-2 md:pt-40">
           <div className="fade-up">
             <p className="mb-5 font-quran text-xl text-gold">
               ﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾

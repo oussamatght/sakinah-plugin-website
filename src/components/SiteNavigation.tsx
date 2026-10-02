@@ -39,14 +39,14 @@ export function SiteNavigation({ overlay = false }: SiteNavigationProps) {
 
           <nav
             aria-label="التنقل الرئيسي"
-            className="w-full overflow-x-auto pb-1 md:w-auto md:overflow-visible md:pb-0"
+            className="w-full md:w-auto"
           >
-            <div className="flex min-w-max items-center justify-center gap-1.5 text-[11px] sm:text-sm">
+            <div className="grid grid-cols-2 items-center gap-1 text-xs sm:flex sm:flex-wrap sm:justify-center sm:gap-1.5 sm:text-sm md:justify-end">
               {links.map(({ to, label }) => (
                 <Link
                   key={to}
                   to={to}
-                  className={`shrink-0 whitespace-nowrap rounded-full px-2.5 py-1.5 text-center leading-tight transition hover:bg-gold/15 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold sm:px-3 sm:py-2 ${
+                  className={`rounded-full px-2 py-2 text-center leading-tight transition hover:bg-gold/15 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold sm:shrink-0 sm:whitespace-nowrap sm:px-3 ${
                     to === "/download" ? "bg-gold font-semibold text-night hover:text-night" : ""
                   }`}
                 >
@@ -57,9 +57,9 @@ export function SiteNavigation({ overlay = false }: SiteNavigationProps) {
                 href="https://github.com/oussamatght"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1.5 transition hover:bg-gold/15 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold sm:px-3 sm:py-2"
+                className="inline-flex items-center justify-center gap-1.5 rounded-full px-2 py-2 transition hover:bg-gold/15 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold sm:shrink-0 sm:whitespace-nowrap sm:px-3"
               >
-                <Github className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
+                <Github className="h-4 w-4" aria-hidden="true" />
                 GitHub
               </a>
             </div>
